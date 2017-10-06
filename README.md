@@ -1,6 +1,6 @@
 This is a Angular 4 App that allows user to add, delete, edit Todo Items.
 
-The TodoItems are storre in a backend server. The backend Server provides a set of Rest API's to interact with the Server.
+The TodoItems are stored in a backend server. The backend Server provides a set of Rest API's to interact with the Server.
 
 Starting the Server:
 1. cd server
