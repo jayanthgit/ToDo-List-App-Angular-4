@@ -110,11 +110,11 @@ app.post('/deleteTodoItems', function(req, res) {
     })
 });
 
-var sslOptions = {
-    key: fs.readFileSync('key.pem'),
-    cert: fs.readFileSync('cert.pem'),
-    passphrase: '1234'
-  };
+// var sslOptions = {
+//     key: fs.readFileSync('key.pem'),
+//     cert: fs.readFileSync('cert.pem'),
+//     passphrase: '1234'
+//   };
 
 //app.listen(3000);
 http.createServer(app).listen(3000);
