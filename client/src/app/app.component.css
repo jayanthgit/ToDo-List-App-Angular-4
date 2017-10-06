@@ -1,0 +1,36 @@
+.topArea {
+    width: 60%;
+    background-color: lightblue;
+}
+
+.topAreaSpacing {
+    margin: 10px;
+}
+
+ul {
+    width: 50%;    
+}
+
+li {
+    background-color: azure;
+    margin: 5px;
+}
+
+.liLeftDiv {
+    width: 90%;
+    float: left;
+}
+
+.liRightDiv {
+    width: 10%;
+    display: inline-block;
+}
+
+.deleteIcon {
+    display: none;
+}
+
+li:hover .deleteIcon {
+    display: block;
+}
+

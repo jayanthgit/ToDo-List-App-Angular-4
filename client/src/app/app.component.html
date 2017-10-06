@@ -1,0 +1,32 @@
+<div class="topArea">
+  <div class="input-group">
+    <input input type="text" class="form-control topAreaSpacing" 
+           [(ngModel)]="todoItemDescription">
+    <button type="button" class="btn btn-primary topAreaSpacing" 
+            [disabled]="todoItem == ''" (click)="addTodoItem()">Add Task</button>
+  </div>
+</div>
+<ul class="list-group" *ngFor="let item of todoItems">
+  <li class="list-group-item">
+    <div style="width:100%">
+      <div class="liLeftDiv">
+          <div>
+            <div *ngIf="item.isEditable">
+              <textarea [(ngModel)]="item.description"> {{ item.description }} </textarea> 
+              <i class="fa fa-2x fa-check" aria-hidden="true" (click)="editTodoItemComplete(item)"></i>
+            </div>
+            <div *ngIf="!item.isEditable">
+              {{ item.description }} 
+            </div>
+          </div>
+          <div><span class="label"></span> {{ item.timeCreated }} </div>
+      </div>            
+      <div class="liRightDiv">
+          <div class="deleteIcon">
+            <i class="fa fa-2x fa-pencil-square-o" aria-hidden="true" (click)="editTodoItem(item)"></i>
+            <i class="fa fa-2x fa-trash-o" aria-hidden="true" (click)="deleteTodoItem(item)"></i>
+          </div>
+      </div>
+    </div>
+  </li>  
+</ul>
